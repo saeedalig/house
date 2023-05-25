@@ -5,7 +5,7 @@ from typing import List
 PROJECT_NAME="housing-predictor"
 VERSION="0.0.1"
 AUTHOR="ASA"
-DESRCIPTION="This is a first FSDS Nov batch Machine Learning Project"
+DESRCIPTION="This is a first Machine Learning Project"
 
 REQUIREMENT_FILE_NAME="requirements.txt"
 
@@ -33,6 +33,10 @@ name=PROJECT_NAME,
 version=VERSION,
 author=AUTHOR,
 description=DESRCIPTION,
-packages=find_packages(), 
-install_requires=get_requirements_list()
+packages=find_packages(), # creates a package dynamically (e.g housing)
+install_requires=get_requirements_list() # install the external libraries mentioned in requirements.txt
 )
+
+
+if __name__=="__main__":
+    print(get_requirements_list())
